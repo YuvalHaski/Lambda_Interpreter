@@ -1,0 +1,6 @@
+Defun {name: factorial, arguments: (n,)}
+(n == 0) || (n * factorial(n - 1))
+
+factorial(5)
+(Lambd x. (Lambd y. (x+y)))(5,6)
+
