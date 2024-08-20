@@ -11,9 +11,7 @@ def execute_file(filename):
         tokens = Lexer(code).tokenize()
         ast = Parser(tokens).parse()
         interpreter = Interpreter(ast)
-        result = interpreter.interpret()
-        if result is not None:
-            print(result)
+        interpreter.interpret()
     except FileNotFoundError:
         print(f"Error: The file '{filename}' was not found.")
     except Exception as e:

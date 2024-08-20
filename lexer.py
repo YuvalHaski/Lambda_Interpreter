@@ -31,7 +31,7 @@ class Lexer:
         ('DOT', r'\.'),               # Dot
         ('NEWLINE', r'\n'),           # Line endings
         ('SKIP', r'[ \t]+'),          # Skip over spaces and tabs
-        ('COMMENT', r'//.*'),         # Single line comment
+        ('COMMENT', r'#.*'),         # Single line comment
         ('MISMATCH', r'.'),           # Any other character
     ]
 
@@ -58,3 +58,5 @@ class Lexer:
             self.tokens.append((kind, value, self.line_num, column))
         self.tokens.append(('EOF', 'EOF', self.line_num, column))
         return self.tokens
+
+

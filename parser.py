@@ -195,7 +195,6 @@ class Parser:
                 self.expect('NOT')
                 expr = self.parse_expression()
                 unary_op = UnaryOperation(op, expr)
-                print(f"Parsed unary operation: {unary_op}")
                 return unary_op
 
             if self.current_token[0] == 'ID' and self.pos + 1 < len(self.tokens) and self.tokens[self.pos + 1][0] == 'LPAREN':
